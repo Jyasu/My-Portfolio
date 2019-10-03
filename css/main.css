@@ -152,11 +152,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  /*Opacity set to 0 for animation to, blend the slow loading better*/
+  opacity:0;
 }
 
 @media(max-width: 768px) {
   .home-img {
     background-position: left;
+    opacity:0;
   }
 }
 
