@@ -107,11 +107,17 @@ html {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   position: relative;
-  font: normal normal bold 77px/1 "abel", Helvetica, sans-serif;
+  font: normal normal bold 115px/1 "abel", Helvetica, sans-serif;
   color: #f32c05;
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
   margin-bottom: 1rem;
+}
+
+@media(max-width: 768px) {
+  .title-text {
+    font: normal normal bold 90px/1 "abel", Helvetica, sans-serif;
+  }
 }
 
 .container {
@@ -150,12 +156,12 @@ html {
 }
 
 .skills-content {
-  width: 100vw;
   box-shadow: 0 -15px 20px 0 rgba(0,0,0,0.25);
   background-color: #eaeaea;
   position: relative;
   padding: 7em 0 7em 0;
   z-index: 12;
+
 }
 
 .skill-header {
@@ -475,13 +481,16 @@ html {
 .collaspible {
   position: relative;
   cursor: pointer;
-  margin: 1em 0 0 0;
+  margin-top: 1em;
   padding: 1em;
   background: rgb(254,254,254);
   -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
   -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
   box-shadow: 0 0 1px rgba(0,0,0,0.20);
   z-index: 15;
+
+  /*For animation*/
+  opacity:0;
 }
 
 .active, .collaspible:hover {
@@ -645,6 +654,9 @@ html {
     flex: 19%;
     max-width: 19%;
     padding: 0 4px;
+
+    /*for animation*/
+    opacity:0;
   }
 
   .img-column img {
@@ -663,6 +675,7 @@ html {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
+      max-height: none;
     }
   }
 
@@ -671,6 +684,7 @@ html {
       -ms-flex: 100%;
       flex: 100%;
       max-width: 100%;
+      max-height: none;
     }
   }
 

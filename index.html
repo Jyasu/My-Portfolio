@@ -25,8 +25,8 @@
 <!-- Add your site or application content here -->
 <div class="home-img">
 <div id="home" class="home-content" style="align-content: center;">
-  <div class="title-text"style="font-size: 90px;  margin-top: 10rem;">Justin Wheeler</div>
-  <div class="title-text" style="font-size: 40px">IT Specialist</div>
+  <div class="title-text"style="margin-top: 10rem;">Justin Wheeler</div>
+  <div class="title-text" style="font-size: 60px">IT Specialist</div>
 </div>
 </div>
 
@@ -273,7 +273,35 @@
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+    $(document).ready(function() {
+        $(window).scroll( function(){
+
+            $('.collaspible, .img-column').each( function(i){
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                var windowBottom = $(window).scrollTop() + $(window).height();
+
+                /* Once object is completely show, increase opacity*/
+                if( windowBottom > objectBottom ){
+                    $(this).animate({'opacity':'1'},500);
+                }
+            });
+
+            $('.img-column img').each( function(i){
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                var windowBottom = $(window).scrollTop() + $(window).height();
+
+                /* Once object is completely show, increase opacity*/
+                if( windowBottom > objectBottom ){
+                    $(this).animate({'opacity':'1'},500);
+                }
+            });
+        });
+    });
+
+
+  /*****Function for navigating the tabs in the 'My Skills' Section*******/
   function openSkill(evt, skill) {
     var tabbedContent = document.getElementsByClassName("tabbed-content");
     var tabbedLinks = document.getElementsByClassName("tabbed-links");
@@ -290,8 +318,8 @@
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 
-
-  var coll = document.getElementsByClassName("collaspible"); /*Collaspible box in timeline*/
+/******Script for collapsible boxes in the timeline section******/
+  var coll = document.getElementsByClassName("collaspible");
   for (var i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
           this.classList.toggle("active");
