@@ -378,7 +378,7 @@ html {
   background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
   background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
   background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-  z-index: 5;
+  z-index: -5;
 }
 
 .timeline li {
@@ -523,7 +523,6 @@ html {
   position: relative;
   font: normal normal bold 18px/1 "abel", Helvetica, sans-serif;
   color: #000000;
-  text-align: center;
 }
 
 .left-side .collaspible,
@@ -622,6 +621,10 @@ html {
   .right-side .collaspible {
     margin: 1em 0 0 0.75em;
   }
+  .collaspible p {
+    float: right;
+  }
+
 }
 
 @media(min-width: 992px) {
@@ -644,7 +647,7 @@ html {
     float: right;
     text-align: left;
   }
-
+}
   /*Portfolio Gallery Begins here*/
 
   .img-row {
