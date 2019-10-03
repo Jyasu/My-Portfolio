@@ -102,7 +102,7 @@ html {
   font: normal normal 18px/1 "abel", Helvetica, sans-serif;
 }
 
-.title-text {
+.title-text, .subtitle-text {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -112,6 +112,11 @@ html {
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
   margin-bottom: 1rem;
+}
+
+.subtitle-text {
+  opacity:0;
+  margin-left: 1000px;
 }
 
 @media(max-width: 768px) {
@@ -174,6 +179,10 @@ html {
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
   margin-bottom: 1rem;
+
+  /*For animation*/
+  opacity:0;
+  margin-left:100px;
 }
 
 .my-skills {
@@ -654,9 +663,6 @@ html {
     flex: 19%;
     max-width: 19%;
     padding: 0 4px;
-
-    /*for animation*/
-    opacity:0;
   }
 
   .img-column img {

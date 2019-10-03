@@ -26,7 +26,7 @@
 <div class="home-img">
 <div id="home" class="home-content" style="align-content: center;">
   <div class="title-text"style="margin-top: 10rem;">Justin Wheeler</div>
-  <div class="title-text" style="font-size: 60px">IT Specialist</div>
+  <div class="subtitle-text" style="font-size: 60px">IT Specialist</div>
 </div>
 </div>
 
@@ -276,15 +276,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
     $(document).ready(function() {
+        $('.subtitle-text').each( function(i){
+          $(this).animate({'opacity':'1','margin-left':'0px'},500);
+        });
+
         $(window).scroll( function(){
 
-            $('.collaspible, .img-column').each( function(i){
+            $('.collaspible').each( function(i){
                 var objectBottom = $(this).offset().top + $(this).outerHeight();
                 var windowBottom = $(window).scrollTop() + $(window).height();
 
                 /* Once object is completely show, increase opacity*/
                 if( windowBottom > objectBottom ){
                     $(this).animate({'opacity':'1'},500);
+                }
+            });
+
+            $('.skill-header').each( function(i){
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                var windowBottom = $(window).scrollTop() + $(window).height();
+
+                /* Once object is completely show, increase opacity*/
+                if( windowBottom > objectBottom ){
+                    $(this).animate({'opacity':'1','margin-left':'0px'},500);
                 }
             });
         });
